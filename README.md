@@ -12,7 +12,7 @@ Getting Started:
 
 To run this app on your local machine, make sure you have Flutter and Dart installed.
 1. Clone this repository:
-   git clone https://github.com/your-username/your-to-do-app.git
+   git clone 
 2. Change directory to the project folder:
    cd your-to-do-app
 3. Install dependencies:
