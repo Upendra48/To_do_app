@@ -7,8 +7,8 @@ class ToDoTile extends StatelessWidget {
   final Function(bool?)? onChanged;
   final Function(BuildContext)? deleteFunction;
 
-  ToDoTile({
-    Key? key, // Added 'Key' parameter for the constructor
+  const ToDoTile({super.key, 
+    Key? tileKey, // Renamed 'key' parameter for the constructor
     required this.taskName,
     required this.taskCompleted,
     required this.onChanged,
