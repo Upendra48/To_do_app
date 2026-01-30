@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     // Load initial data when opening the app for the first time
-    if (_todoBox.isEmpty) {
+    if (_todoBox.get('todolist') == null) {
       db.createInitialData();
       db.updateData();
     } else {

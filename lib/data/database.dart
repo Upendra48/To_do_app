@@ -16,14 +16,18 @@ class ToDoDataBase {
   }
 
   // Load the data from database
-  void loadData(){
-    toDoList = _todoBox.get('todolist');
-
+  void loadData() {
+    var data = _todoBox.get('todolist');
+    if (data != null) {
+      // Convert to List<List> to ensure proper typing
+      toDoList = List.from(data.map((item) => List.from(item)));
+    } else {
+      createInitialData();
+    }
   }
 
   // update the database
-  void updateData(){
+  void updateData() {
     _todoBox.put('todolist', toDoList);
-
   }
 }
